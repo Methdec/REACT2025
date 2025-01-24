@@ -3,11 +3,11 @@ import ApiFetch from "../../api/ApiFetch";
 import "../../pages/Home.scss";
 import { Comment } from "../Comments/Comments"; 
 
-export default function FetchBosses() {
-    const [selectedbosse, setSelectedbosse] = useState(null);
+export default function FetchBoss() {
+    const [selectedboss, setselectedboss] = useState(null);
 
-    const handleClick = (bosse) => {
-        setSelectedbosse(selectedbosse === bosse ? null : bosse);
+    const handleClick = (boss) => {
+        setselectedboss(selectedboss === boss? null : boss);
     };
 
     return (
@@ -16,19 +16,19 @@ export default function FetchBosses() {
                 {(data) => (
                     <div className="fetch-list">
                         {data
-                            .filter((bosse) => bosse.name)
-                            .map((bosse) => (
-                                <div key={bosse.id} className="fetch-item">
+                            .filter((boss) => boss.name)
+                            .map((boss) => (
+                                <div key={boss.id} className="fetch-item">
                                     <div className="fetch-item-content">
-                                        <p className="zelda" onClick={() => handleClick(bosse)}>
-                                          {bosse.name}
+                                        <p className="zelda" onClick={() => handleClick(boss)}>
+                                            {boss.name}
                                         </p>
-                                        {selectedbosse === bosse && (
-                                          <>
-                                            <p>{bosse.description}</p>
-                                            <br></br>
-                                            <Comment/>
-                                          </>
+                                        {selectedboss === boss&& (
+                                            <>
+                                                <p>{boss.description}</p>
+                                                <br></br>
+                                                <Comment/>
+                                            </>
                                         )}
                                     </div>
                                 </div>

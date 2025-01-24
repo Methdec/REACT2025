@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 
-import FetchBosses from "../components/FetchBoss/FetchBoss";
 import FetchGames from "../components/FetchGames/FetchGames";
+import FetchBoss from "../Components/FetchBoss/FetchBoss";
 import FetchMonsters from "../components/FetchMonsters/FetchMonsters";
 import FetchCharacters from "../components/FetchCharacters/FetchCharacters";
 import FetchDungeons from "../components/FetchDungeons/FetchDungeons";
@@ -13,7 +13,7 @@ export default function Router() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/games" element={<FetchGames />} />
-      <Route path="/bosses" element={<FetchBosses />} />
+      <Route path="/bosses" element={<FetchBoss />} />
       <Route path="/monsters" element={<FetchMonsters />} />
       <Route path="/characters" element={<FetchCharacters />} />
       <Route path="/dungeons" element={<FetchDungeons />} />
