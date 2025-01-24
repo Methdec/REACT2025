@@ -7,23 +7,27 @@ export default function ApiFetch({ url, children }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url)
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
-        return response.json();
-      })
-      .then((result) => {
-        setData(result.data || []);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setIsLoading(false);
-      });
-  }, [url]);
+        const result = await response.json();
+        setTimeout(() => {
+          setData(result.data || []);
+          setIsLoading(false);
+        }, 1000); // Delay for 1 second
+      } catch (err) {
+        setTimeout(() => {
+          setError(err.message);
+          setIsLoading(false);
+        }, 1000); // Delay for 1 second
+      }
+    };
 
+    fetchData();
+  }, [url]);
 
   if (isLoading) {
     return (
