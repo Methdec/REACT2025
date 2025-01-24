@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ApiFetch from "../../api/ApiFetch";
-import "../../pages/home.scss";
+import "../../pages/Home.scss";
 import { Comment } from "../Comments/Comments"; 
 
 export default function Fetchmonsters() {

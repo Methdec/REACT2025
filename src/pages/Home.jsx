@@ -13,13 +13,13 @@ export default function Home() {
       <Link to="/games">
       <button>Voir les jeux</button>
       </Link>
-      <Link to="/characters">
+      <Link to="/bosses">
       <button>Voir les boss</button>
       </Link>
       <Link to="/monsters">
       <button>Voir les monstres</button>
       </Link>
-      <Link to="/bosses">
+      <Link to="/characters">
       <button>Voir les personnages</button>
       </Link>
       <Link to="/dungeons">

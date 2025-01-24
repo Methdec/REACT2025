@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import ApiFetch from "../../api/ApiFetch";
-import "../../pages/home.scss";
+import "../../pages/Home.scss";
 import { Comment } from "../Comments/Comments"; 
 
-export default function Fetchcharacters() {
-    const [selectedcharacter, setSelectedcharacter] = useState(null);
+export default function FetchBosses() {
+    const [selectedbosse, setSelectedbosse] = useState(null);
 
-    const handleClick = (character) => {
-        setSelectedcharacter(selectedcharacter === character ? null : character);
+    const handleClick = (bosse) => {
+        setSelectedbosse(selectedbosse === bosse ? null : bosse);
     };
 
     return (
         <div className="fetch-container">
-            <ApiFetch url="https://zelda.fanapis.com/api/characters">
+            <ApiFetch url="https://zelda.fanapis.com/api/bosses">
                 {(data) => (
                     <div className="fetch-list">
                         {data
-                            .filter((character) => character.name)
-                            .map((character) => (
-                                <div key={character.id} className="fetch-item">
+                            .filter((bosse) => bosse.name)
+                            .map((bosse) => (
+                                <div key={bosse.id} className="fetch-item">
                                     <div className="fetch-item-content">
-                                        <p className="zelda" onClick={() => handleClick(character)}>
-                                          {character.name}
+                                        <p className="zelda" onClick={() => handleClick(bosse)}>
+                                          {bosse.name}
                                         </p>
-                                        {selectedcharacter === character && (
+                                        {selectedbosse === bosse && (
                                           <>
-                                            <p>{character.description}</p>
+                                            <p>{bosse.description}</p>
                                             <br></br>
                                             <Comment/>
                                           </>

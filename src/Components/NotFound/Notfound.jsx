@@ -12,7 +12,7 @@ export default function NotFound() {
       />
       <h1>404</h1>
       <p>Il semble que vous soyez perdu, héros.</p>
-      <Link to="/" className="back-home">
+      <Link to="/" className="back-Home">
         Retourner à Hyrule
       </Link>
     </div>
