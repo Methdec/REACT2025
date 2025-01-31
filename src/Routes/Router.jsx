@@ -13,6 +13,7 @@ import NotFound from "../Components/NotFound/NotFound";
 export default function Router() {
   return (
     <Routes>
+      <Route path="*" element={<NotFound />} /> 
       <Route path="/" element={<Home />} />
       <Route path="/games" element={<FetchGames />} />
       <Route path="/bosses" element={<FetchBoss />} />
@@ -21,7 +22,6 @@ export default function Router() {
       <Route path="/dungeons" element={<FetchDungeons />} />
       <Route path="/connect" element={<Connect />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} /> 
     </Routes>
   );
 }
