@@ -8,7 +8,7 @@ import FetchDungeons from "../Components/FetchDungeons/FetchDungeons";
 import Connect from "../Components/Connect/Connect";
 import Home from "../pages/Home";  
 import Contact from "../Components/Contact/Contact"; 
-import NotFound from "../Components/NotFound/NotFound";
+import NotFound from "../Components/NotFound/Notfound";
 
 export default function Router() {
   return (
