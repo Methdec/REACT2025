@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 .Home {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,7 @@
     height: 100vh;
     background-color: #0b3d0b; // Fond vert pour correspondre au thème Zelda
     color: #ffd700; // Texte en doré pour s'harmoniser avec Zelda
-    font-family: "Triforce", sans-serif;
+    font-family: 'MedievalSharp', cursive;
     text-align: center;
     padding: 20px;
   
@@ -19,7 +21,7 @@
     button {
       background-color: #ffd700; // Boutons avec une couleur dorée
       color: #0b3d0b; // Texte des boutons en vert foncé
-      font-family: "Triforce", sans-serif;
+      font-family: 'MedievalSharp', cursive;
       font-size: 18px;
       padding: 10px 20px;
       margin: 10px;
@@ -57,7 +59,7 @@
   padding: 20px;
   background-color: #0b3d0b;
   color: #ffd700;
-  font-family: "Triforce", sans-serif;
+  font-family: 'MedievalSharp', cursive;
   text-align: center;
 }
 

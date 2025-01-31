@@ -1,20 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./NotFound.scss";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
 
-export default function NotFound() {
+const NotFoundPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
-    <div className="not-found">
-      <img
-        src="./game-over.png" 
-        alt="Game Over"
-        className="not-found__image"
-      />
-      <h1>404</h1>
-      <p>Il semble que vous soyez perdu, héros.</p>
-      <Link to="/" className="back-Home">
-        Retourner à Hyrule
-      </Link>
-    </div>
+    <main className="not-found">
+      <h1>404 - Page Not Found</h1>
+      <p>Redirecting to the homepage in 3 seconds...</p>
+    </main>
   );
-}
+};
+
+export default NotFoundPage;

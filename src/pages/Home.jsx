@@ -45,6 +45,9 @@ export default function Home() {
       </Link>
       
       )}
+      <Link to="/contact">
+      <button>Nous contacter</button>
+      </Link>
       <br></br>
       <br></br>
       <br></br>
